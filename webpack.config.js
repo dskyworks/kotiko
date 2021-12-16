@@ -12,20 +12,20 @@ module.exports = {
   mode: mode,
   entry: {
     scripts: path.resolve(__dirname, './src/index.js'),
-    user: path.resolve(__dirname, './src/js/user.js'),
+    // user: path.resolve(__dirname, './src/js/user.js'),
   },
 
   // Output
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].[contenthash].js',
+    filename: './js/[name].[contenthash].js',
     assetModuleFilename: "assets/[hash][ext][query]",
     clean: true,
   },
 
   // Optimization
   optimization: {
-    runtimeChunk: 'single',
+    // runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
     },
@@ -48,7 +48,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `./css/[contenthash].css`,
     }),
-    new StylelintPlugin(),
+    new StylelintPlugin({
+      // fix: true,
+      // emitError: false,
+    }),
   ],
 
   // Modules
