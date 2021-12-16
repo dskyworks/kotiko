@@ -1,9 +1,16 @@
 @use 'variables';
 @use 'reset';
 @use 'fonts';
+@use 'blocks/header';
+@use 'blocks/main';
+@use 'blocks/title';
 
-body {
-  color: #ccc;
+
+.html {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.body {
+  color: variables.$text-color;
   font-family: 'Montserrat', sans-serif;
-  background-color: #324;
 }
