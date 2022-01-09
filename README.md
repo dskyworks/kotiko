@@ -1,13 +1,10 @@
-<div style="text-align: center">
-  <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg" alt="Webpack logo">
-  <h1>Webpack Template</h1>
-</div>
+# Котико - отель для котиков
 
 ## Установка
 
 ``` bash
-git clone https://github.com/dskyworks/webpack-template.git
-cd webpack-template
+git clone https://github.com/dskyworks/kotiko-lp.git
+cd kotiko-lp
 npm i
 ```
 
