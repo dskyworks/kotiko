@@ -50,7 +50,7 @@ module.exports = {
     }),
     new StylelintPlugin({
       // fix: true,
-      // emitError: false,
+      emitError: false,
     }),
   ],
 
