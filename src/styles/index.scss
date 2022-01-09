@@ -5,12 +5,19 @@
 @use 'blocks/main';
 @use 'blocks/title';
 
+.html,
+.body {
+  height: 100vh;
+}
 
 .html {
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 .body {
+  margin: 0;
+  padding: 0 10px;
   color: variables.$text-color;
   font-family: 'Montserrat', sans-serif;
+  background: url('./../images/header-bg.svg') no-repeat calc(50% + 300px) 10px;
 }
