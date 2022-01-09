@@ -6,6 +6,7 @@
   ],
   "ignoreFiles": ["**/*.js", "**/*.pug", "./README.md"],
   "rules": {
+    "block-no-empty": null,
     "no-descending-specificity": null,
     "order/properties-alphabetical-order": null,
     "color-no-invalid-hex": true,
