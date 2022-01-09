@@ -1,8 +1,23 @@
 @use '../variables';
 
+// Global
+
 .header {
-  margin-top: 30px;
+  width: 100%;
+  padding-top: 30px;
 }
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+// Logo
 
 .logo {
   display: inline-block;
@@ -19,4 +34,129 @@
   font-weight: 500;
   font-size: 16px;
   text-align: center;
+}
+
+// Header links
+
+.header__links {
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header__links-wrapper {
+  display: flex;
+
+  @media (min-width: 531px) and (max-width: 770px) {
+    margin-top: 10px;
+  }
+
+  @media (max-width: 530px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 531px) {
+    flex-direction: row;
+  }
+}
+
+.header__location,
+.header__work-time,
+.header__tel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+
+  @media (max-width: 530px) {
+    justify-content: center;
+    margin-top: 35px;
+    text-align: center;
+  }
+}
+
+.header__work-time,
+.header__tel {
+  @media (min-width: 531px) {
+    margin-left: 45px;
+  }
+}
+
+.header__location::before {
+  background: url('/src/images/marker.svg');
+}
+
+.header__work-time::before {
+  background: url('/src/images/clock.svg');
+}
+
+.header__tel::before {
+  background: url('/src/images/tel.svg');
+}
+
+
+.header__location::before,
+.header__work-time::before,
+.header__tel::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 530px) {
+    top: -25px;
+  }
+
+  @media (min-width: 531px) {
+    left: -25px;
+  }
+}
+
+// Header button
+
+.header__button {
+  @media (max-width: 530px) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 531px) and (max-width: 770px) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: 771px) {
+    margin-left: 30px;
+  }
+}
+
+.header-button {
+  padding: 15px 30px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: variables.$main-color;
+  border-radius: 100px;
+}
+
+.header-button__label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.header-button__label::before {
+  content: url('/src/images/instagram.svg');
+  position: absolute;
+  left: -40px;
+  width: 24px;
+  height: 24px;
 }
