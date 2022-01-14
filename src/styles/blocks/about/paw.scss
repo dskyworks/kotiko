@@ -1,0 +1,310 @@
+@use '/src/styles/variables';
+
+// About
+
+.about {
+  margin-top: 13px;
+
+  @media (min-width: 1200px) {
+    background: url('/src/images/section1-cats-bg.svg') no-repeat calc(50% + 345px) 196px;
+  }
+
+  &__paw {
+    @media (max-width: 800px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__welcome {
+
+  }
+
+  &__advantages {
+    @media (min-width: 1024px) {
+      margin-top: 150px;
+    }
+  }
+}
+
+.about__wrapper {
+  display: grid;
+  column-gap: 30px;
+
+  @media (max-width: 1023px) {
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 381px max-content;
+  }
+
+  @media (max-width: 1199px) {
+    justify-content: center;
+  }
+}
+
+// Paw
+
+.paw {
+  position: relative;
+  width: 381px;
+  height: 379px;
+  font-family: variables.$main-font;
+  background: url('/src/images/paw.svg') no-repeat;
+  background-size: contain;
+
+  @media (max-width: 560px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: 1024px) {
+    &::after {
+      content: 'Любовь и забота гарантированы';
+      position: absolute;
+      bottom: -130px;
+      left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      color: #ffffff;
+      font-size: 14px;
+      text-align: center;
+      background: url('/src/images/sticker.svg') no-repeat center;
+      border-radius: 50%;
+      transform: rotateZ(-11deg);
+    }
+  }
+}
+
+// Fingers and palm
+
+.finger,
+.palm {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+
+// Fingers only
+
+.finger {
+  width: 106px;
+  height: 134px;
+  font-size: 20px;
+  line-height: 1.4;
+  border-radius: 50%;
+
+  @media (max-width: 560px) {
+    width: 83px;
+    height: 104px;
+    font-size: 16px;
+  }
+}
+
+// Palm only
+
+.palm {
+  width: 180px;
+  height: 186px;
+  font-size: 40px;
+  border-radius: 100% 100% 50% 50%;
+
+  @media (max-width: 560px) {
+    width: 150px;
+    height: 140px;
+    font-size: 31px;
+  }
+}
+
+.paw__palm-link {
+  top: 172px;
+  left: 118px;
+  transform: rotateZ(347deg);
+
+  @media (max-width: 560px) {
+    top: 142px;
+    left: 89px;
+  }
+}
+
+// Fingers and palm position
+
+.paw__finger1-link {
+  top: 136px;
+  left: 0;
+  transform: rotateZ(335deg);
+
+  &--small {
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 560px) {
+    top: 108px;
+  }
+}
+
+.paw__finger2-link {
+  top: 21px;
+  left: 63px;
+  transform: rotateZ(348deg);
+
+  &--small {
+    font-size: 0.5em;
+  }
+
+  @media (max-width: 560px) {
+    top: 17px;
+    left: 49px;
+  }
+}
+
+.paw__finger3-link {
+  top: 0;
+  left: 179px;
+  transform: rotateZ(358deg);
+
+  &--small {
+    font-size: 0.6em;
+  }
+
+  @media (max-width: 560px) {
+    left: 141px;
+  }
+}
+
+.paw__finger4-link {
+  top: 86px;
+  left: 273px;
+  transform: rotateZ(10deg);
+
+  @media (max-width: 560px) {
+    top: 68px;
+    left: 215px;
+  }
+}
+
+
+// Title wrapper
+
+.welcome__title-wrapper {
+  margin-left: 32px;
+}
+
+.welcome__title {
+  color: variables.$text-color;
+  font-weight: 600;
+
+  @media (max-width: 560px) {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  @media (min-width: 561px) and (max-width: 1023px) {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 48px;
+  }
+}
+
+.welcome__subtitle {
+  font-size: 18px;
+
+  @media (max-width: 560px) {
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+// Callback form
+
+.welcome__callback {
+
+}
+
+.callback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.callback__label-name,
+.callback__label-tel, {
+  font-size: 0;
+  visibility: hidden;
+}
+
+.callback__input-name,
+.callback__input-tel {
+  width: 230px;
+  margin-bottom: 30px;
+  padding: 13px 1px;
+  font-size: 16px;
+  font-family: variables.$main-font;
+  border: 0;
+  border-bottom: 1px solid variables.$text-color;
+  outline: 0;
+}
+
+.callback__input-name:focus-visible,
+.callback__input-tel:focus-visible {
+  box-shadow: 0 25px 25px -20px variables.$text-color;
+}
+
+// Advantages
+
+.advantages {
+  display: flex;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 1024px) {
+    grid-area: 2 / span 2;
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  padding-left: 65px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 45px;
+    height: 38px;
+    background: url('/src/images/paw-inside-heart.svg') no-repeat;
+  }
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+}
