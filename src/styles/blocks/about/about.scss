@@ -1,0 +1,172 @@
+@use '/src/styles/variables';
+@use '/src/styles/blocks/about/paw.scss';
+
+// About
+
+.about {
+  margin-top: 13px;
+
+  @media (min-width: 1200px) {
+    background: url('/src/images/section1-cats-bg.svg') no-repeat calc(50% + 345px) 196px;
+  }
+
+  &__paw {
+    @media (max-width: 800px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__welcome {
+
+  }
+
+  &__advantages {
+    @media (min-width: 1024px) {
+      margin-top: 150px;
+    }
+  }
+}
+
+.about__wrapper {
+  display: grid;
+  column-gap: 30px;
+
+  @media (max-width: 1023px) {
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 381px max-content;
+  }
+
+  @media (max-width: 1199px) {
+    justify-content: center;
+  }
+}
+
+// Title wrapper
+
+.welcome__title-wrapper {
+  margin-left: 32px;
+}
+
+.welcome__title {
+  color: variables.$text-color;
+  font-weight: 600;
+
+  @media (max-width: 560px) {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  @media (min-width: 561px) and (max-width: 1023px) {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 48px;
+  }
+}
+
+.welcome__subtitle {
+  font-size: 18px;
+
+  @media (max-width: 560px) {
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.welcome__text {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+    text-align: center;
+  }
+}
+
+// Callback form
+
+.welcome__callback {
+
+}
+
+.callback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.callback__label-name,
+.callback__label-tel, {
+  font-size: 0;
+  visibility: hidden;
+}
+
+.callback__input-name,
+.callback__input-tel {
+  width: 230px;
+  margin-bottom: 30px;
+  padding: 13px 1px;
+  font-size: 16px;
+  font-family: variables.$main-font;
+  border: 0;
+  border-bottom: 1px solid variables.$text-color;
+  outline: 0;
+}
+
+.callback__input-name:focus-visible,
+.callback__input-tel:focus-visible {
+  box-shadow: 0 25px 25px -20px variables.$text-color;
+}
+
+// Advantages
+
+.advantages {
+  display: flex;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 1024px) {
+    grid-area: 2 / span 2;
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  padding-left: 65px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 45px;
+    height: 38px;
+    background: url('/src/images/paw-inside-heart.svg') no-repeat;
+  }
+
+  @media (max-width: 1023px) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+}
