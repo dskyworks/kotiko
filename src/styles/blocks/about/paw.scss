@@ -227,6 +227,15 @@
   }
 }
 
+.welcome__text {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+    text-align: center;
+  }
+}
+
 // Callback form
 
 .welcome__callback {
