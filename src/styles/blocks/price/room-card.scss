@@ -1,0 +1,133 @@
+@use '/src/styles/variables';
+
+.room {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 10px;
+  outline: 1px solid variables.$main-color;
+
+  @media (min-width: 501px) {
+    width: 380px;
+  }
+
+  @media (max-width: 500px) {
+    width: 300px;
+  }
+}
+
+.room__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px;
+  padding: 20px;
+}
+
+.room__header,
+.room__room-sizes,
+.room__house-sizes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room__name,
+.room__price,
+.room__room-size-label,
+.room__room-size-params,
+.room__house-size-label,
+.room__house-size-params {
+  margin: 0;
+}
+
+.room__name {
+  color: variables.$main-color;
+  line-height: 1.5;
+}
+
+.room__price {
+  align-self: flex-end;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.room__room-size-label,
+.room__house-size-label {
+  color: #848484;
+}
+
+.room__sizes {
+  margin-top: 40px;
+}
+
+.room__house-sizes {
+  align-items: flex-start;
+  margin-top: 25px;
+}
+
+.room__room-size-label,
+.room__room-size-params,
+.room__house-size-label,
+.room__house-size-params {
+  flex: 1;
+}
+
+.room__room-size-params,
+.room__house-size-params, {
+  margin-left: 30px;
+}
+
+.room__reservation {
+  align-self: center;
+  margin: 40px 10px 0;
+  font-weight: 600;
+  font-size: 20px;
+  transition: background-color 0.2s, color 0.2s;
+
+  @media (min-width: 501px) {
+    padding: 21px 82px;
+  }
+
+  &:hover {
+    color: variables.$main-color;
+    background-color: #ffffff;
+    outline: 1px solid variables.$main-color;
+    -moz-outline-radius: 100px;
+  }
+}
+
+// Swiper slider
+
+:root {
+  --swiper-navigation-size: 50px;
+}
+
+.swiper,
+.room__image {
+  @media (min-width: 501px) {
+    width: 380px;
+  }
+
+  @media (max-width: 500px) {
+    width: 300px;
+  }
+}
+
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 1 1 26l25 25' stroke='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+
+  &::after {
+    content: '';
+  }
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 1 25 25L1 51' stroke='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+
+  &::after {
+    content: '';
+  }
+}

@@ -1,0 +1,22 @@
+mixin room(name, price, roomSize, houseSize, ...images)
+  .room
+    .room__photos
+      .swiper
+        .swiper-wrapper
+          for fileName in images
+            .swiper-slide
+              img.room__image(src=require(`/src/images/${fileName}`))
+        .swiper-button-prev
+        .swiper-button-next
+    .room__info
+      .room__header
+        h3.room__name Номер<br>!{name}
+        p.room__price !{price}р/сутки
+      .room__sizes
+        .room__room-sizes
+          p.room__room-size-label Размер номера
+          p.room__room-size-params !{roomSize} см
+        .room__house-sizes
+          p.room__house-size-label Размер домиков
+          p.room__house-size-params !{houseSize} см
+      button.room__reservation.button Забронировать
