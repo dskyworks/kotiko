@@ -1,0 +1,54 @@
+@use '/src/styles/variables';
+@use '/src/styles/blocks/price/room-card';
+
+.price {
+  display: flex;
+  flex-direction: column;
+  margin-top: 95px;
+}
+
+.price__header {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1220px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.promo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    position: absolute;
+    width: 170px;
+    margin-top: 80px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+.price__promo {
+  margin: 20px;
+
+  @media (min-width: 1220px) {
+    margin-left: 320px;
+  }
+}
+
+.price__title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.price__rooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
