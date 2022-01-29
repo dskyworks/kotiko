@@ -1,13 +1,13 @@
 mixin room(name, price, roomSize, houseSize, ...images)
   .room
     .room__photos
-      .swiper
-        .swiper-wrapper
+      .swiper-room-card
+        .swiper-room-card-wrapper
           for fileName in images
-            .swiper-slide
+            .swiper-room-card-slide
               img.room__image(src=require(`/src/images/${fileName}`))
-        .swiper-button-prev
-        .swiper-button-next
+        .swiper-room-card-button-prev
+        .swiper-room-card-button-next
     .room__info
       .room__header
         h3.room__name Номер<br>!{name}

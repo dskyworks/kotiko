@@ -111,12 +111,11 @@
 
 // Swiper slider
 
-:root {
-  --swiper-navigation-size: 50px;
-}
-
-.swiper,
+.swiper-room-card,
 .room__image {
+  position: relative;
+  overflow: hidden;
+
   @media (min-width: 501px) {
     width: 380px;
   }
@@ -126,20 +125,31 @@
   }
 }
 
-.swiper-button-prev {
-  background-image: url("data:image/svg+xml,%3Csvg width='27' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 1 1 26l25 25' stroke='%23fff'/%3E%3C/svg%3E");
+.swiper-room-card-wrapper {
+  display: flex;
+}
+
+.swiper-room-card-button-prev,
+.swiper-room-card-button-next {
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  height: 50px;
   background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
 
   &::after {
     content: '';
   }
 }
 
-.swiper-button-next {
-  background-image: url("data:image/svg+xml,%3Csvg width='27' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 1 25 25L1 51' stroke='%23fff'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
+.swiper-room-card-button-prev {
+  left: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 1 1 26l25 25' stroke='%23fff'/%3E%3C/svg%3E");
+}
 
-  &::after {
-    content: '';
-  }
+.swiper-room-card-button-next {
+  right: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 1 25 25L1 51' stroke='%23fff'/%3E%3C/svg%3E");
 }

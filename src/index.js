@@ -4,15 +4,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import "./styles/index.scss";
 
-Swiper.use([Navigation]);
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
+const roomCardSwiper = new Swiper('.swiper-room-card', {
+  modules: [Navigation],
   direction: 'horizontal',
   loop: true,
-
-  // Navigation arrows
+  slideClass: 'swiper-room-card-slide',
+  wrapperClass: 'swiper-room-card-wrapper',
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-room-card-button-next',
+    prevEl: '.swiper-room-card-button-prev',
   },
 });
