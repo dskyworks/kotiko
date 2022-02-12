@@ -17,6 +17,11 @@
   @media (max-width: 1023px) {
     margin-top: 100px;
   }
+
+  @media (max-width: 800px) {
+    font-weight: 600;
+    font-size: 20px;
+  }
 }
 
 .booking-request__container {
@@ -35,6 +40,10 @@
 }
 
 .booking-request__image {
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
   @media (min-width: 1024px) {
     position: absolute;
     top: 0;
@@ -52,19 +61,39 @@
   @media (max-width: 1023px) {
     margin-top: 30px;
   }
+
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 .booking-request__fieldset {
   margin: 0;
-  padding: 60px 50px 60px 60px;
   background-color: #fffef1;
   border: 0;
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 330px;
+    padding-top: 30px;
+  }
+
+  @media (min-width: 801px) {
+    padding: 60px 50px 60px 60px;
+  }
 }
 
 .booking-request__input-wrapper {
   display: grid;
 
   @media (max-width: 800px) {
+    row-gap: 45px;
+    width: 100%;
   }
 
   @media (min-width: 801px) {
@@ -96,15 +125,35 @@
   border: 0;
   border-bottom: 1px solid #000000;
   border-radius: 0;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+}
+
+.booking-request__select {
+  color: variables.$gray-color;
 }
 
 .booking-request__option {
+}
 
+.booking-request__notes-container {
+  @media (min-width: 801px) {
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 45px;
+  }
 }
 
 .booking-request__notes-container .booking-request__input {
   width: 100%;
-  margin-top: 50px;
+
+  @media (min-width: 801px) {
+    margin-top: 50px;
+  }
 }
 
 .booking-request__button {
@@ -114,6 +163,11 @@
   font-size: 20px;
   border: 1px solid #f6a6bf;
   transition: background-color 0.2s, color 0.2s;
+
+  @media (max-width: 800px) {
+    margin-top: 50px;
+    padding: 15px 30px;
+  }
 
   &:hover {
     color: #f6a6bf;
