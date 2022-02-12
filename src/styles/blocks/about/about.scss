@@ -5,6 +5,7 @@
 
 .about {
   margin-top: 13px;
+  overflow-x: hidden;
 
   @media (min-width: 1200px) {
     background: url('/src/images/section1-cats-bg.svg') no-repeat calc(50% + 345px) 196px;
