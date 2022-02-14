@@ -1,0 +1,12 @@
+section.monitoring.container
+  .monitoring__top
+    h2.monitoring__title Видеонаблюдение
+    p.monitoring__description Чтобы увидеть вашего кота или кошку нужно войти под логином и паролем, которые вам выдали при заселении
+  .cameras
+    ul.cameras__list
+      li.cameras__item
+        p.cameras__description Выберите номер комнаты вашего котика и посмотрите, чем он сейчас занят
+      - let cams = 17
+      - for (let x = 0; x < cams; x++)
+        li.cameras__item
+          a.cameras__link(href="#") #{x + 1}

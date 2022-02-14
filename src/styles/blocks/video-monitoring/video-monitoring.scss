@@ -1,0 +1,144 @@
+// Видеонаблюдение
+
+.monitoring {
+  padding-bottom: 10px;
+  overflow: hidden;
+
+  @media (min-width: 601px) {
+    margin-top: 150px;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 70px;
+  }
+}
+
+.monitoring__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.monitoring__title {
+  display: inline;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+
+  @media (min-width: 601px) {
+    margin-right: 20px;
+    font-size: 40px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.monitoring__description {
+  display: inline-block;
+  width: 450px;
+  margin: 0;
+
+  @media (min-width: 601px) {
+    margin-right: 100px;
+  }
+}
+
+.cameras {
+  @media (min-width: 601px) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 30px;
+  }
+}
+
+.cameras__description {
+  margin: 0;
+  font-size: 20px;
+
+  @media (min-width: 601px) {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.cameras__item:first-child {
+  grid-area: 1 / span 3;
+}
+
+.cameras__list {
+  display: grid;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 601px) {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 35px;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 25px;
+  }
+}
+
+.cameras__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e36f96;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #faf7f5;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: 601px) {
+    width: 140px;
+    height: 140px;
+    font-size: 40px;
+  }
+
+  @media (max-width: 600px) {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+}
+
+.cameras__link::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: -5px;
+  background-image: url('/src/images/cameras-item-bg.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform 0.3s ease-out;
+
+  @media (min-width: 601px) {
+    width: 70px;
+    height: 57px;
+  }
+
+  @media (max-width: 600px) {
+    width: 40px;
+    height: 33px;
+  }
+}
+
+.cameras__link:focus::after,
+.cameras__link:hover::after {
+  background-image: url('/src/images/cameras-item-hover-bg.svg');
+  transform: rotate(-45deg);
+}
