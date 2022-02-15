@@ -1,0 +1,127 @@
+// Страхи котовладельца
+
+@use '/src/styles/variables';
+
+.fears__title {
+  margin: 0;
+  font-weight: 600;
+
+  @media (max-width: 600px) {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+
+  @media (min-width: 601px) {
+    margin-top: 170px;
+    font-size: 40px;
+  }
+}
+
+.fears__help {
+  @media (max-width: 600px) {
+    display: block;
+    color: variables.$gray-color;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  @media (min-width: 601px) {
+    display: none;
+  }
+}
+
+.accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fears__accordion {
+  @media (max-width: 600px) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 601px) {
+    margin-top: 50px;
+  }
+}
+
+.accordion__item {
+  background-color: #faf7f5;
+
+  @media (max-width: 600px) {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: 601px) {
+    margin-bottom: 20px;
+  }
+}
+
+.accordion__heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  border: 1px solid #faf7f5;
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    padding: 20px 0;
+    font-size: 16px;
+  }
+
+  @media (min-width: 601px) {
+    padding: 20px 100px 20px 30px;
+    font-size: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 45px;
+      width: 2px;
+      height: 30px;
+      background-color: variables.$main-color;
+      transition: height 0.15s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 30px;
+      width: 30px;
+      height: 2px;
+      background-color: variables.$main-color;
+    }
+  }
+}
+
+.accordion__text {
+  display: none;
+  width: 100%;
+  max-width: 720px;
+  margin: 0;
+  padding-bottom: 20px;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 601px) {
+    padding-right: 100px;
+    padding-left: 30px;
+    font-size: 16px;
+  }
+}
+
+.accordion__checkbox:focus-visible + .accordion__heading {
+  border: 1px solid variables.$main-color;
+}
+
+.accordion__checkbox:checked ~ .accordion__text {
+  display: block;
+}
+
+.accordion__checkbox:checked + .accordion__heading::before {
+  height: 0;
+}
