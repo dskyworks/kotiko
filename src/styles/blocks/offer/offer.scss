@@ -1,0 +1,90 @@
+// Мы предлагаем
+
+@use '/src/styles/variables';
+
+.offer {
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: 601px) {
+    margin-top: 31px;
+    padding-top: 93px;
+    background: url('/src/images/offer-bg.svg') no-repeat top right;
+  }
+}
+
+.offer__title {
+  @media (max-width: 600px) {
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  @media (min-width: 601px) {
+    font-weight: 600;
+    font-size: 26px;
+  }
+}
+
+.offer__list {
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 601px) {
+    display: grid;
+    grid-template-columns: minmax(min-content, 500px) minmax(min-content, 580px);
+    gap: 40px;
+    margin-top: 68px;
+    font-size: 18px;
+  }
+}
+
+.offer__item {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    margin-top: 20px;
+  }
+
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    display: block;
+    flex-shrink: 0;
+    background: url('/src/images/offer-list-style.svg') no-repeat center;
+    background-size: contain;
+
+    @media (min-width: 601px) {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 600px) {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.offer__sub-list {
+  padding: 0;
+  color: variables.$gray-color;
+  list-style: none;
+
+  @media (max-width: 600px) {
+    margin-left: 45px;
+  }
+
+  @media (min-width: 601px) {
+    margin-top: 10px;
+    margin-left: 60px;
+  }
+}
