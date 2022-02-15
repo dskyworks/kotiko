@@ -1,0 +1,6 @@
+mixin important(message)
+  section.important.container
+    img.important__image(src=require('/src/images/important-bg.svg') alt="Киска и граммофон")
+    .important__content
+      h2.important__title ВАЖНО!
+      p.important__message !{message}

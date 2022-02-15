@@ -1,3 +1,5 @@
+include pug/mixins/important
+
 doctype html
 html.html(lang='ru')
   include pug/head
@@ -12,3 +14,4 @@ html.html(lang='ru')
       include pug/video-monitoring
       include pug/info
       include pug/offer
+      +important('При необходимости медицинского наблюдения за больным котиком или после операции, для его безопасности, рекомендуем выбирать гостиницу при ветеринарной клинике, т.к. гостиница для кошек не является медицинским учреждением, а предоставляет услуги по временному содержанию животных.')

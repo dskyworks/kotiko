@@ -1,0 +1,60 @@
+// Важно
+
+@use '/src/styles/variables';
+
+.important {
+  display: grid;
+  background-color: variables.$yellow-color;
+
+  @media (max-width: 900px) {
+    row-gap: 30px;
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 901px) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-top: 90px;
+    padding: 90px 78px 90px 46px;
+    column-gap: 60px;
+  }
+
+  &__image {
+    width: 100%;
+
+    @media (max-width: 900px) {
+      grid-row: 2;
+      max-width: 510px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
+
+    @media (min-width: 901px) {
+      font-size: 26px;
+    }
+  }
+
+  &__message {
+    margin: 0;
+    font-size: 16px;
+
+    @media (max-width: 900px) {
+      margin-top: 30px;
+    }
+
+    @media (min-width: 901px) {
+      margin-top: 25px;
+    }
+  }
+}
