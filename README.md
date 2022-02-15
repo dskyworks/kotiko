@@ -3,7 +3,7 @@
 ## Установка
 
 ``` bash
-git clone https://github.com/dskyworks/kotiko-lp.git
+git clone https://github.com/dskyworks/kotiko.git
 cd kotiko-lp
 npm i
 ```
