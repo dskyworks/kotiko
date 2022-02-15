@@ -12,3 +12,8 @@ $yellow-color: #fffef1;
   margin: 0 auto;
   padding: 0 10px;
 }
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
