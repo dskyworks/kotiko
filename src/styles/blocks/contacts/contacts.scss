@@ -1,0 +1,164 @@
+// Адрес и контакты
+
+@use '/src/styles/variables';
+
+.contacts {
+  margin-top: 100px;
+  background-color: #faf7f5;
+
+  @media (max-width: 599px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 600px) {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  font-weight: 600;
+
+  @media (max-width: 599px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 40px;
+  }
+}
+
+.contacts__street {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+
+  @media (min-width: 1024px) {
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 255px;
+  }
+
+  @media (max-width: 599px) {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  @media (min-width: 600px) {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+}
+
+.contacts__street-to-clipboard {
+  padding: 0;
+  color: variables.$gray-color;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 599px) {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+.contacts__street-to-clipboard--copied {
+  color: #008000;
+  cursor: default;
+}
+
+.contacts__map {
+  @media (max-width: 599px) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 600px) {
+    margin-top: 48px;
+  }
+}
+
+.contacts__path {
+  @media (max-width: 699px) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 700px) {
+    margin-top: 70px;
+  }
+}
+
+.path {
+  @media (min-width: 900px) {
+    display: flex;
+    background: url('/src/images/loc-bg.svg') no-repeat center left;
+  }
+}
+
+.path__title {
+  margin: 0;
+
+  @media (max-width: 699px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 700px) {
+    width: 100%;
+    max-width: 300px;
+    font-weight: 600;
+    font-size: 26px;
+  }
+}
+
+.path__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 700px) {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 20px;
+  }
+}
+
+.path__item {
+  width: 200px;
+
+  @media (max-width: 699px) {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: 700px) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.path__image {
+  display: block;
+  width: 100%;
+}
+
+.path__description {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 16px;
+}
