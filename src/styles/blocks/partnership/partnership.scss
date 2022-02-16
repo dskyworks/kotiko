@@ -1,0 +1,119 @@
+// Сотрудничество
+
+@use '/src/styles/variables';
+
+.partnership {
+  display: flex;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: space-between;
+    margin-top: 170px;
+  }
+}
+
+.partnership__info-wrapper {
+  width: 100%;
+  max-width: 490px;
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.partnership__title {
+  margin: 0;
+  font-weight: 600;
+
+  @media (max-width: 1023px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 40px;
+  }
+}
+
+.partnership__subtitle {
+  margin: 0;
+
+  @media (max-width: 1023px) {
+    order: 2;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 70px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+.partnership__text {
+  margin: 0;
+  margin-top: 30px;
+  font-weight: 500;
+
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+.partnership__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 1023px) {
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+  }
+}
+
+.partnership__item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+
+  @media (max-width: 1023px) {
+    margin-top: 30px;
+
+    &::before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 73px;
+      height: 60px;
+      margin-right: 25px;
+      background: url('/src/images/partnership-item-small.svg') no-repeat center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: center;
+    width: 246px;
+    height: 246px;
+    padding: 10px;
+    text-align: center;
+    background: url('/src/images/partnership-item-bg.svg') no-repeat center;
+    border: 1px solid variables.$main-color;
+    border-radius: 50%;
+  }
+}
