@@ -1,0 +1,50 @@
+// Footer
+
+@use '/src/styles/variables';
+
+.footer {
+  &__copyright {
+    display: block;
+    color: #28afc9;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  @media (max-width: 899px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+    &__list {
+      display: none;
+    }
+  }
+
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 34px;
+    padding-bottom: 30px;
+
+    &__list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 13px;
+      list-style: none;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &__link {
+      color: variables.$text-color;
+      text-decoration: none;
+    }
+  }
+}
