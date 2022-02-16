@@ -116,17 +116,11 @@
 .callback__input-tel {
   width: 230px;
   margin-bottom: 30px;
-  padding: 13px 1px;
+  padding: 13px 2px;
   font-size: 16px;
   font-family: variables.$main-font;
   border: 0;
   border-bottom: 1px solid variables.$text-color;
-  outline: 0;
-}
-
-.callback__input-name:focus-visible,
-.callback__input-tel:focus-visible {
-  box-shadow: 0 25px 25px -20px variables.$text-color;
 }
 
 // Advantages
