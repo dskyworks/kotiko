@@ -4,7 +4,7 @@
 
 ``` bash
 git clone https://github.com/dskyworks/kotiko.git
-cd kotiko-lp
+cd kotiko
 npm i
 ```
 
