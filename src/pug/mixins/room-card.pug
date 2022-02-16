@@ -5,7 +5,7 @@ mixin room(name, price, roomSize, houseSize, ...images)
         .swiper-room-card-wrapper
           for fileName in images
             .swiper-room-card-slide
-              img.room__image(src=require(`/src/images/${fileName}`))
+              img.room__image(src=require(`/src/images/${fileName}`) alt="Фото номера")
         button.swiper-room-card-button-prev(aria-label="Предыдущий слайд")
         button.swiper-room-card-button-next(aria-label="Следующий слайд")
     .room__info
