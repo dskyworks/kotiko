@@ -22,6 +22,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+  width: 283px;
+  height: 206px;
+  background: url('/src/images/price-promo-background.svg') no-repeat center;
+  background-size: contain;
 
   &__text {
     position: absolute;
