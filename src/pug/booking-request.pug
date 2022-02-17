@@ -2,10 +2,10 @@ section.booking-request.container(id="bookingRequest")
   h2.booking-request__title Заявка на бронирование
   .booking-request__container
     img.booking-request__image(src=require("/src/images/request-bg.svg") alt="Кот лежит на боку и кайфует")
-    form.booking-request__form(id="booking" action="" method="GET")
+    form.booking-request__form(id="booking" action="#" method="GET")
       fieldset.booking-request__fieldset
+        legend.booking-request__legend Заявка на бронирование
         .booking-request__input-wrapper
-          legend.booking-request__legend Заявка на бронирование
           label.booking-request__label(for="bookingRequestName") Имя
           input.booking-request__input(id="bookingRequestName" name="bookingRequestName" type="text" placeholder="Имя" required)
           label.booking-request__label(for="bookingRequestTel") Телефон
@@ -17,7 +17,7 @@ section.booking-request.container(id="bookingRequest")
           label.booking-request__label(for="bookingRequestCheckOutDate") Дата выезда
           input.booking-request__input(id="bookingRequestCheckOutDate" name="bookingRequestCheckOutDate" type="text" placeholder="Дата выезда" required)
           label.booking-request__label(for="bookingRequestRoomType") Тип номера
-          select.booking-request__select(id="bookingRequestRoomType" form="booking" name="bookingRequestRoomType" placeholder="Тип номера" required)
+          select.booking-request__select(id="bookingRequestRoomType" form="booking" name="bookingRequestRoomType" required)
             option.booking-request__option(value="" disabled selected hidden) Тип номера
             option.booking-request__option(value="standard") Стандарт
             option.booking-request__option(value="standardPlus") Стандарт+
