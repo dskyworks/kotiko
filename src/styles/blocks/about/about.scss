@@ -38,7 +38,7 @@
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: 381px max-content;
+    grid-template-columns: 381px 1fr;
   }
 
   @media (max-width: 1199px) {
@@ -76,7 +76,11 @@
 
   @media (max-width: 560px) {
     width: 300px;
+    margin: 0 auto;
     font-size: 20px;
+  }
+
+  @media (max-width: 1023px) {
     text-align: center;
   }
 }
