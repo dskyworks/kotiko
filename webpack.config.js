@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 let mode = process.env.NODE_ENV;
 const isDev = process.env.NODE_ENV === 'development';
@@ -12,7 +13,6 @@ module.exports = {
   mode: mode,
   entry: {
     scripts: path.resolve(__dirname, './src/index.js'),
-    // user: path.resolve(__dirname, './src/js/user.js'),
   },
 
   // Output
@@ -29,6 +29,15 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
+    minimizer: [
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.squooshMinify,
+          options: {
+          },
+        },
+      }),
+    ],
   },
 
   // Performance
