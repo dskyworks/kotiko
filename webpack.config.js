@@ -32,8 +32,34 @@ module.exports = {
     minimizer: [
       new ImageMinimizerPlugin({
         minimizer: {
-          implementation: ImageMinimizerPlugin.squooshMinify,
+          implementation: ImageMinimizerPlugin.imageminMinify,
           options: {
+            // Lossless optimization with custom option
+            // Feel free to experiment with options for better result for you
+            plugins: [
+              ["gifsicle", { interlaced: true }],
+              ["mozjpeg", { progressive: true }],
+              ["pngquant", { optimizationLevel: 5 }],
+              ["svgo", {
+                  plugins: [
+                    {
+                      name: 'preset-default',
+                      params: {
+                        overrides: {
+                          // customize default plugin options
+                          inlineStyles: {
+                            onlyMatchedOnce: false,
+                          },
+
+                          // or disable plugins
+                          removeDoctype: false,
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            ],
           },
         },
       }),
