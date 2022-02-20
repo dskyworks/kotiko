@@ -6,8 +6,8 @@ mixin room(name, price, roomSize, houseSize, ...images)
           for fileName in images
             .swiper-room-card-slide
               img.room__image(src=require(`/src/images/${fileName}`) alt="Фото номера")
-        button.swiper-room-card-button-prev(aria-label="Предыдущий слайд")
-        button.swiper-room-card-button-next(aria-label="Следующий слайд")
+        button.swiper-room-card-button-prev(type="button" aria-label="Предыдущий слайд")
+        button.swiper-room-card-button-next(type="button" aria-label="Следующий слайд")
     .room__info
       .room__header
         h3.room__name Номер<br>!{name}
@@ -19,4 +19,4 @@ mixin room(name, price, roomSize, houseSize, ...images)
         .room__house-sizes
           p.room__house-size-label Размер домиков
           p.room__house-size-params !{houseSize} см
-      button.room__reservation.button Забронировать
+      button.room__reservation.button(type="button") Забронировать
